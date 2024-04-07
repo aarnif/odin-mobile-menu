@@ -1,9 +1,13 @@
-import sumOfTwoNumbers from "./modules/example.js";
+const menuButton = document.querySelector(".menu-button");
+
+const handleMenuButton = () => {
+  console.log("Menu button pressed!");
+  const menuIcon = document.querySelector(".menu-icon");
+  menuIcon.classList.toggle("active");
+};
 
 const app = () => {
-  const a = 1;
-  const b = 2;
-  console.log(`The sum of integers ${a} and ${b} is ${sumOfTwoNumbers(a, b)}`);
+  menuButton.addEventListener("click", handleMenuButton);
 };
 
 export default app;
