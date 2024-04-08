@@ -3,9 +3,33 @@ const menuButton = document.querySelector(".menu-button");
 const handleMenuButtonPress = () => {
   console.log("Menu button pressed!");
   const menuIcon = document.querySelector(".menu-icon");
-  const menu = document.querySelector(".menu");
   menuIcon.classList.toggle("active");
-  menu.classList.toggle("show");
+  handleMenuItemAnimation();
+};
+
+const handleMenuItemAnimation = () => {
+  const overlay = document.querySelector(".overlay");
+  const menu = document.querySelector(".menu");
+  const menuItems = document.querySelectorAll(".menu-item");
+  const transitionDuration = 100;
+
+  if (!menu.classList.contains("show")) {
+    console.log("Show menu");
+    overlay.classList.toggle("show");
+    menu.classList.toggle("show");
+  } else {
+    setTimeout(() => {
+      console.log("Hide menu");
+      overlay.classList.toggle("show");
+      menu.classList.toggle("show");
+    }, menuItems.length * transitionDuration);
+  }
+
+  menuItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.classList.toggle("show");
+    }, index * transitionDuration);
+  });
 };
 
 const app = () => {
