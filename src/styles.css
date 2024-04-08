@@ -10,14 +10,17 @@
     @apply transition-all duration-300 ease-in-out;
   }
   .menu-button {
-    @apply absolute bottom-4 right-4 p-1 bg-slate-400 rounded-full shadow-lg z-10
+    @apply absolute bottom-4 right-4 p-1 bg-green-600 bg-opacity-40 border-2 border-green-600 rounded-full shadow-lg z-10
     active:scale-95 transition-effect;
   }
+  .menu-button.active {
+    @apply bg-red-600 bg-opacity-40 border-red-600;
+  }
   .menu-icon {
-    @apply w-12 h-12 fill-current text-sky-100 transition-effect;
+    @apply w-12 h-12 fill-current text-green-600 transition-effect;
   }
   .menu-icon.active {
-    @apply rotate-45;
+    @apply rotate-45 text-red-600;
   }
   .menu {
     @apply invisible absolute inset-0 flex justify-end items-center p-4 z-10
@@ -27,7 +30,7 @@
     @apply visible;
   }
   .menu-items {
-    @apply w-full relative flex flex-col items-end bottom-[-50px];
+    @apply w-full relative flex flex-col items-end bottom-[-40px];
   }
   .menu-item {
     @apply relative invisible opacity-0 max-w-[180px] flex justify-between items-center transition-effect;
