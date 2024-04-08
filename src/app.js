@@ -1,3 +1,5 @@
+import addProfiles from "./modules/profiles";
+
 const menuButton = document.querySelector(".menu-button");
 
 const handleMenuButtonPress = () => {
@@ -33,6 +35,7 @@ const handleMenuButtonPress = () => {
 };
 
 const app = () => {
+  addProfiles(document.getElementById("content"));
   menuButton.addEventListener("click", handleMenuButtonPress);
 };
 
