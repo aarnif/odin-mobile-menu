@@ -18,4 +18,25 @@
   .menu-icon.active {
     @apply rotate-45;
   }
+  .menu {
+    @apply invisible absolute inset-0 flex justify-end items-center p-4;
+  }
+  .menu.show {
+    @apply visible bg-black bg-opacity-70;
+  }
+  .menu-items {
+    @apply w-full relative flex flex-col items-end bottom-[-50px];
+  }
+  .menu-item {
+    @apply relative max-w-[180px] flex justify-between items-center;
+  }
+  .menu-item-title {
+    @apply text-sky-100 text-lg font-semibold;
+  }
+  .menu-item-button {
+    @apply my-2 ml-4 p-2 flex justify-center items-center bg-slate-400 border-2 border-slate-200 rounded-full shadow-lg active:scale-95 transition-effect;
+  }
+  .menu-item-icon {
+    @apply w-8 h-8 fill-current text-sky-100;
+  }
 }
