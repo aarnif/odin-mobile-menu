@@ -77,6 +77,18 @@
   .profile-last-message-time {
     @apply w-[70px] text-xs text-slate-600 text-center text-wrap;
   }
+  .footer {
+    @apply fixed bottom-0 w-full flex justify-center items-center shadow-lg;
+  }
+  .footer-content {
+    @apply flex justify-center items-center py-2;
+  }
+  .footer-text {
+    @apply pr-2 text-lg font-bold;
+  }
+  .github-icon {
+    @apply w-6 fill-current active:scale-95;
+  }
   .overlay {
     @apply fixed inset-0 translate-x-[-100%] invisible opacity-0 bg-black bg-opacity-70 transition-effect;
   }
