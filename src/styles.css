@@ -16,14 +16,14 @@
     @apply text-slate-100 text-xl font-semibold;
   }
   .menu-button {
-    @apply fixed bottom-4 right-4 p-1 bg-green-600 bg-opacity-40 border-2 border-green-600 rounded-full shadow-lg z-10
+    @apply fixed bottom-4 right-4 p-1 bg-green-600 bg-opacity-100 border-2 border-green-600 rounded-full shadow-lg z-10
     active:scale-95 transition-effect;
   }
   .menu-button.active {
     @apply bg-red-600 bg-opacity-40 border-red-600;
   }
   .menu-icon {
-    @apply w-12 h-12 fill-current text-green-600 transition-effect;
+    @apply w-12 h-12 fill-current text-white transition-effect;
   }
   .menu-icon.active {
     @apply rotate-45 text-red-600;
@@ -78,7 +78,7 @@
     @apply w-[70px] text-xs text-slate-600 text-center text-wrap;
   }
   .footer {
-    @apply fixed bottom-0 w-full flex justify-center items-center shadow-lg;
+    @apply w-full flex justify-center items-center bg-green-600 shadow-lg text-white;
   }
   .footer-content {
     @apply flex justify-center items-center py-2;
